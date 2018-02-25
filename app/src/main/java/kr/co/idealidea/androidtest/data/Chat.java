@@ -11,6 +11,11 @@ public class Chat implements Serializable {
     boolean isMyMessage; // true 내가입력 : false 컴퓨터
     String content; // 대화 내용
 
+    public Chat(boolean isMyMessage, String content) {
+        this.isMyMessage = isMyMessage;
+        this.content = content;
+    }
+
     public boolean isMyMessage() {
         return isMyMessage;
     }

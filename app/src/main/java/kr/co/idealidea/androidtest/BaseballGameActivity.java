@@ -1,12 +1,19 @@
 package kr.co.idealidea.androidtest;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+
+import kr.co.idealidea.androidtest.adapter.ChatAdapter;
+import kr.co.idealidea.androidtest.data.Chat;
 import kr.co.idealidea.androidtest.util.BaseballGameUtil;
 
 public class BaseballGameActivity extends BaseActivity {
@@ -18,6 +25,10 @@ public class BaseballGameActivity extends BaseActivity {
     private android.widget.ListView chatListView;
     private android.widget.EditText numberInputEdt;
     private android.widget.Button sendBtn;
+
+
+    List<Chat> chatList = new ArrayList<>();
+    ChatAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +46,31 @@ public class BaseballGameActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
 
-                int[] strikeAndBall = BaseballGameUtil.checkStrikeAndBall(numberInputEdt.getText().toString());
 
-                Toast.makeText(mContext, strikeAndBall[0]+"S " + strikeAndBall[1] + "B 입니다.", Toast.LENGTH_SHORT).show();
+                Chat tempChat = new Chat(true, numberInputEdt.getText().toString());
+                chatList.add(tempChat);
+
+                mAdapter.notifyDataSetChanged();
+
+
+
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        int[] strikeAndBall = BaseballGameUtil.checkStrikeAndBall(numberInputEdt.getText().toString());
+
+                        String resultStr = String.format(Locale.KOREA, "%dS %dB 입니다.", strikeAndBall[0], strikeAndBall[1]);
+
+                        Chat comChat = new Chat(false, resultStr);
+                        chatList.add(comChat);
+                        mAdapter.notifyDataSetChanged();
+                    }
+                }, 1000);
+
+
+//                Toast.makeText(mContext, strikeAndBall[0]+"S " + strikeAndBall[1] + "B 입니다.", Toast.LENGTH_SHORT).show();
 
 
             }
@@ -48,6 +81,9 @@ public class BaseballGameActivity extends BaseActivity {
     @Override
     public void setValues() {
         BaseballGameUtil.makeQuestion();
+
+        mAdapter = new ChatAdapter(mContext, chatList);
+        chatListView.setAdapter(mAdapter);
 
     }
 
