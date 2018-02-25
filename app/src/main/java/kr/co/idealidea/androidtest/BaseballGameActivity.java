@@ -11,6 +11,10 @@ import kr.co.idealidea.androidtest.util.BaseballGameUtil;
 
 public class BaseballGameActivity extends BaseActivity {
 
+//    화면에 들어오면 onCreate 자동으로 문제를 생성.
+//    버튼을 누르면 ?s ?b
+
+
     private android.widget.ListView chatListView;
     private android.widget.EditText numberInputEdt;
     private android.widget.Button sendBtn;
@@ -35,6 +39,7 @@ public class BaseballGameActivity extends BaseActivity {
 
                 Toast.makeText(mContext, strikeAndBall[0]+"S " + strikeAndBall[1] + "B 입니다.", Toast.LENGTH_SHORT).show();
 
+
             }
         });
 
@@ -42,6 +47,7 @@ public class BaseballGameActivity extends BaseActivity {
 
     @Override
     public void setValues() {
+        BaseballGameUtil.makeQuestion();
 
     }
 
