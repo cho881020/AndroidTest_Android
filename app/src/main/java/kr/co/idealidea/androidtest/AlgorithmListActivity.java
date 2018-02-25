@@ -18,6 +18,7 @@ public class AlgorithmListActivity extends BaseActivity implements View.OnClickL
     private Button multipleBtn;
     private Button starBtn;
     private Button gugudanBtn;
+    private Button baseballBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,14 @@ public class AlgorithmListActivity extends BaseActivity implements View.OnClickL
         starBtn.setOnClickListener(this);
         gugudanBtn.setOnClickListener(this);
 
+        baseballBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, BaseballGameActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -54,6 +63,7 @@ public class AlgorithmListActivity extends BaseActivity implements View.OnClickL
 
     @Override
     public void bindViews() {
+        this.baseballBtn = (Button) findViewById(R.id.baseballBtn);
         this.gugudanBtn = (Button) findViewById(R.id.gugudanBtn);
         this.starBtn = (Button) findViewById(R.id.starBtn);
         this.multipleBtn = (Button) findViewById(R.id.multipleBtn);

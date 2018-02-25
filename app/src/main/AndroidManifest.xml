@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".AlgorithmListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".FindMultipleActivity" />
-        <activity android:name=".MakeStarActivity"></activity>
+        <activity android:name=".MakeStarActivity" />
+        <activity android:name=".BaseballGameActivity"></activity>
     </application>
 
 </manifest>
