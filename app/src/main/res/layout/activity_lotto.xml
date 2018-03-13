@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center"
+    tools:context="kr.co.idealidea.androidtest.LottoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="자본금 : "/>
+        <TextView
+            android:id="@+id/moneyTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10,000,000원"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내가 찍은 번호"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="6"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="10"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="15"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="25"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="32"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="38"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이번주 당첨 번호"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lottoNumTxt01"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="6"/>
+
+            <TextView
+                android:id="@+id/lottoNumTxt02"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="10"/>
+
+            <TextView
+                android:id="@+id/lottoNumTxt03"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="15"/>
+
+            <TextView
+                android:id="@+id/lottoNumTxt04"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="25"/>
+
+            <TextView
+                android:id="@+id/lottoNumTxt05"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="32"/>
+
+            <TextView
+                android:id="@+id/lottoNumTxt06"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="38"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="+"/>
+
+            <TextView
+                android:id="@+id/lottoBonusNumTxt"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="45"/>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="right">
+        <TextView
+            android:id="@+id/firstPlaceCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1등 : 0회"/>
+        <TextView
+            android:id="@+id/secondPlaceCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2등 : 0회"/>
+        <TextView
+            android:id="@+id/thirdPlaceCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3등 : 0회"/>
+        <TextView
+            android:id="@+id/fourthPlaceCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4등 : 0회"/>
+        <TextView
+            android:id="@+id/fifthPlaceCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5등 : 0회"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/amountTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_marginBottom="50dp"
+        android:text="0원 획득!"/>
+
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="추첨 시작"/>
+
+
+</LinearLayout>

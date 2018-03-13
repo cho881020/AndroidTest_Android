@@ -1,8 +1,6 @@
 package kr.co.idealidea.androidtest;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Toast;
 
 public class LoginActivity extends BaseActivity {
 

@@ -19,6 +19,7 @@ public class AlgorithmListActivity extends BaseActivity implements View.OnClickL
     private Button starBtn;
     private Button gugudanBtn;
     private Button baseballBtn;
+    Button calculatorBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,15 @@ public class AlgorithmListActivity extends BaseActivity implements View.OnClickL
             }
         });
 
+        calculatorBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(mContext, CalculatorActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
@@ -67,6 +77,7 @@ public class AlgorithmListActivity extends BaseActivity implements View.OnClickL
         this.gugudanBtn = (Button) findViewById(R.id.gugudanBtn);
         this.starBtn = (Button) findViewById(R.id.starBtn);
         this.multipleBtn = (Button) findViewById(R.id.multipleBtn);
+        calculatorBtn = (Button) findViewById(R.id.calculatorBtn);
 
     }
 

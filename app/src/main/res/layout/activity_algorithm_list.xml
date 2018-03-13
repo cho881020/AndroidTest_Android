@@ -45,6 +45,19 @@
         android:layout_height="wrap_content"
         android:text="야구 게임"/>
 
+    <Button
+        android:id="@+id/calculatorBtn"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="계산기"/>
+
+    <Button
+        android:id="@+id/lottoBtn"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="로또 시뮬레이터"/>
 
 </LinearLayout>
 
